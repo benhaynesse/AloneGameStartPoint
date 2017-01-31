@@ -40,6 +40,9 @@ public class Camera {
         else if(y > offsetMaxY) y = offsetMaxY;
     }
 
+    public Rectangle getExtendedBounds(int range) {
+        return new Rectangle(x - range, y - range, GameWidth + range, GameHeight + range);
+    }
 
     public Rectangle getBounds(){
         return new Rectangle(x,y,GameWidth, GameHeight);

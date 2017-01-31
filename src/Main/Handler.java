@@ -18,13 +18,13 @@ public class Handler {
 
     public Handler(Game game){
         this.game = game;
-
     }
 
-    public void createLevel(String filename, int blockSize){
+    public GameObjectList createLevel(String filename, int blockSize){
         LevelLoader l = new LevelLoader(this);
         l.generateLevel(filename,blockSize);
         objects = l.getLevel();
+        return objects;
     }
 
     public GameObjectList getObjects() {

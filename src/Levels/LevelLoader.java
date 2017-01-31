@@ -25,8 +25,8 @@ public class LevelLoader {
     public void generateLevel(String filename, int blockSize){
 
         BufferedImage levelImage = BufferedImageLoader.loadImage(filename);
-        objects.setWidth(levelImage.getWidth());
-        objects.setHeight(levelImage.getHeight());
+        objects.setWidth(levelImage.getWidth()*blockSize);
+        objects.setHeight(levelImage.getHeight()*blockSize);
 
         for(int yy = 0; yy < levelImage.getHeight(); yy++){
             for(int xx = 0; xx < levelImage.getWidth(); xx++){
